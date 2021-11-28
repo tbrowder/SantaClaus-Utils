@@ -1,0 +1,24 @@
+{
+  "authors": [
+    "Tom Browder"
+  ],
+  "build-depends": [
+  ],
+  "depends": [
+  ],
+  "description": "Provides Raku software tools for Santa Claus and his Elves",
+  "license": "Artistic-2.0",
+  "name": "SantaClaus::Utils",
+  "perl": "6.d",
+  "provides": {
+    "SantaClaus::Utils": "lib/SantaClaus/Utils.rakumod"
+  },
+  "resources": [
+  ],
+  "source-url": "",
+  "tags": [
+  ],
+  "test-depends": [
+  ],
+  "version": "0.0.1"
+}

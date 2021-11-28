@@ -1,7 +1,9 @@
+[![Actions Status](https://github.com/tbrowder/SantaClaus-Utils/workflows/test/badge.svg)](https://github.com/tbrowder/SantaClaus-Utils/actions)
+
 NAME
 ====
 
-SantaClaus::Utils - Provides Raku software tools for Santa Claus and his Elves
+**SantaClaus::Utils** - Provides Raku software tools for Santa Claus and his Elves
 
 SYNOPSIS
 ========
@@ -10,7 +12,7 @@ SYNOPSIS
 use SantaClaus::Utils;
 
 add-entry; # adds a journal entry template to the 
-           # user's C<$HOME/journal> text file
+           # user's '$HOME/journal' text file
 ```
 
 DESCRIPTION

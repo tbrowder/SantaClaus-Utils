@@ -2,7 +2,7 @@
 
 =head1 NAME
 
-SantaClaus::Utils - Provides Raku software tools for Santa Claus and his Elves
+B<SantaClaus::Utils> - Provides Raku software tools for Santa Claus and his Elves
 
 =head1 SYNOPSIS
 
@@ -11,7 +11,7 @@ SantaClaus::Utils - Provides Raku software tools for Santa Claus and his Elves
 use SantaClaus::Utils;
 
 add-entry; # adds a journal entry template to the 
-           # user's C<$HOME/journal> text file
+           # user's '$HOME/journal' text file
 =end code
 
 =head1 DESCRIPTION

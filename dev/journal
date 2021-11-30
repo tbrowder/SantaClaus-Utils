@@ -1,0 +1,89 @@
+=begin Entry :time<2021-6-12T12:32>
+
+=for Task :id<xm-42> :start
+blah blah ...
+
+
+=begin Task :id<xm-22> :status
+
+More blarney...
+
+And still more blarney
+
+=end Task
+
+=end Entry
+
+=begin Entry :time<2021-9-2T16:19>
+=for Task :id<xm-42> :status
+blah blah
+
+=end Entry
+
+Z<Edit the following pod as applicable; do NOT change the time entry.>
+=begin Entry :time<2021-11-28T05:39> 
+Z<Enter one of ':start' or ':end' on the following config line if applicable.>
+=begin Task :id<?> :status 
+Z<Enter notes and comments below this comment line and before the '=end Task' line.>
+Z<Separate paragraphs with one or more blank lines.>
+para 1
+
+para 2
+blah
+
+...
+
+para N
+=end Task
+=end Entry
+
+
+Z<Edit the following as necessary>
+=begin Entry :time<2021-11-30T07:05>
+Z<Enter one of ':start' or ':end' in the following config line if applicable>
+=begin Task :id<build-toy> :employee<jerzi> :status 
+Z<Enter notes and comments here; use blank lines to separate paragraphs.>
+=end Task
+=end Entry
+
+
+  Z<Edit the following Entry as necessary. Add or delete Z comments as desired.>
+=begin Entry :time<2021-11-30T07:12>
+  Z<Enter one of ':start' or ':end' in the following config line if applicable.>
+=begin Task :id<build-toy> :employee<jerzi> :status 
+  Z<Enter notes and comments here; use blank lines to separate paragraphs>
+=end Task
+  Z<Add another Task if applicable; ensure the ':id' is correct before doing so.>
+=end Entry
+
+
+  Z<Edit the following Entry as necessary. Add or delete Z comments as desired.>
+=begin Entry :time<2021-11-30T10:32>
+  Z<Enter one of ':start' or ':end' in the following config line if applicable.>
+=begin Task :id<build-toy> :employee<jerzi> :status
+  Z<Enter notes and comments here; use blank lines to separate paragraphs>
+=end Task
+  Z<Add another Task if applicable; ensure the ':id' is correct before doing so.>
+=end Entry
+
+
+  Z<Edit the following Entry as necessary. Add or delete Z comments as desired.>
+=begin Entry :time<2021-11-30T10:39>
+  Z<Enter one of ':start' or ':end' in the following config line if applicable.>
+=begin Task :id<build-toy> :employee<jerzi> :status
+  Z<Enter notes and comments here; use blank lines to separate paragraphs>
+=end Task
+  Z<Add another Task if applicable; ensure the ':id' is correct before doing so.>
+=end Entry
+
+
+Z<Edit the following Entry as necessary. Add or delete Z comments as desired.>
+=begin Entry :time<2021-11-30T10:50>
+  Z<Enter one of ':start' or ':end' in the following config line if applicable.>
+  =begin Task :id<build-toy> :employee<jerzi> :status
+    Z<Enter notes and comments here; use blank lines to separate paragraphs>
+  =end Task
+
+  Z<Add another Task if applicable; ensure the ':id' is correct before doing so.>
+=end Entry
+

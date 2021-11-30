@@ -10,8 +10,9 @@ B<SantaClaus::Utils> - Provides Raku software tools for Santa Claus and his Elve
 
 use SantaClaus::Utils;
 
-add-entry; # adds a journal entry template to the 
-           # user's '$HOME/journal' text file
+add-entry;     # adds a journal entry template to the 
+               # user's '$HOME/journal' text file
+check-journal; # checks the journal file for correct syntax
 =end code
 
 =head1 DESCRIPTION

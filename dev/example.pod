@@ -1,0 +1,16 @@
+=begin pod
+
+  Some text ...
+
+  =begin Task :start
+
+    Some text ...
+ 
+    More text ... Z<comment>
+
+    B<bold> text
+
+  =end Task
+
+=end pod
+

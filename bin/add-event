@@ -1,0 +1,10 @@
+#!/usr/bin/env raku
+use SantaClaus::Utils;
+
+my $user-id = %*ENV<SANTA_USER_ID> // 'jerzi';
+my $task-id = %*ENV<SANTA_TASK_ID> // 'build-toy';
+
+my $jfil = "journal";
+add-entry-template $jfil, :$user-id, :$task-id;
+
+say "See new Entry appended to file: $jfil";

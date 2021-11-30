@@ -1,0 +1,5 @@
+#!/usr/bin/env raku
+use SantaClaus::Utils;
+
+my $jfil = "journal";
+check-journal $jfil;

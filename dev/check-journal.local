@@ -3,5 +3,5 @@
 use lib <../lib>;
 use SantaClaus::Utils;
 
-my $jfil = "journal";
+my $jfil = "journal.bad";
 check-journal $jfil; # , :debug;

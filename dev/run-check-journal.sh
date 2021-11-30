@@ -1,3 +1,3 @@
 #!/bin/bash
 
-raku -I../lib ../bin/check-journal
+raku -I../lib ../bin/check-journal journal.bad

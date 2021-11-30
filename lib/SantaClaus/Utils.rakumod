@@ -20,10 +20,11 @@ sub check-task-id(:$user-id!, :$task-id!, :$debug) is export {
     # Check task ID for validity
 } # sub check-task-id
 
-sub check-journal($jfil, :$debug = 0 --> Str) is export {
+sub check-journal($jfil, :$debug = 0) is export {
     my $err = 0;
+
     if not $jfil.IO.e {
-        die "FATAL: The input journal file '$jfil' not found";
+        die "FATAL: The input journal file '$jfil' was not found";
     }
     # Check a journal file for valid syntax
     my $dn = 3; # for debugging
@@ -40,7 +41,8 @@ sub check-journal($jfil, :$debug = 0 --> Str) is export {
     my @Pod = load $jstr; #$jfil;
     my $pelems = @Pod.elems;
     if $pelems != 1 {
-        die "FATAL: The \@Pod array should have only one element but it has $pelems";
+        note "ERROR: The \@Pod array should have only one element but it has $pelems";
+        ++$err;
     }
 
     my @pod = @Pod[0].contents;
@@ -84,16 +86,29 @@ sub check-journal($jfil, :$debug = 0 --> Str) is export {
             next unless $pn eq 'Task';
             note "Found Task line" if $debug;
 
-            # possible config keys
+            # possible Task config keys
+            my $id     = $p.config<id> // '';
+            if not $id {
+                note "ERROR: Task is missing a required ':id' config key";
+                ++$err;
+            }
+            if $id eq '?' {
+                note "ERROR: Task ':id' value of '$id' is invalid";
+                ++$err;
+            }
             my $status = $p.config<status> // '';
             my $start  = $p.config<start> // '';
             my $end    = $p.config<end> // '';
-            my $id     = $p.config<id> // '';
+            if not ($status or $start or $end) {
+                note "ERROR: Task id<$id> is missing one of ':status', ':start', or ':end' config keys";
+                ++$err;
+            }
             my @c      = $p.contents;
+            my $para = "";
             for @c -> $pp {
                 next if $pp ~~ Pod::FormattingCode;
                 my $ppt = $pp.^name;
-                note "DEBUG: pod type '$ppt' at third level" if $debug > $dn;
+                note "DEBUG: pod type '$ppt' at third '$jfil' level" if $debug > $dn;
                 my @cc = $pp.contents;
                 for @cc {
                     my $t = $_.^name;
@@ -104,8 +119,13 @@ sub check-journal($jfil, :$debug = 0 --> Str) is export {
                     next if $_ ~~ Pod::FormattingCode;
                     next if $_ !~~ /\S/;
                     $_ = normalize-string $_;
+                    $para ~= " $_";
                     note "  normalized text line: |$_|" if $debug;
                 }
+            }
+            if (not $para) and (not ($start or $end)) and $status {
+                note "ERROR: Task id<$id> has a ':status' config key but no explanation";
+                ++$err;
             }
         }
     }

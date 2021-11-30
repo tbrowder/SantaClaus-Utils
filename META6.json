@@ -5,6 +5,9 @@
   "build-depends": [
   ],
   "depends": [
+    "Pod::Load",
+    "Text::Utils",
+    "Data::Dump"
   ],
   "description": "Provides Raku software tools for Santa Claus and his Elves",
   "license": "Artistic-2.0",

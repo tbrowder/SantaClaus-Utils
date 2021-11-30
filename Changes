@@ -1,6 +1,7 @@
 Revision history for SantaClaus-Utils
 
 {{$NEXT}}
+    - Add missing dependencies
 
 0.0.2  2021-11-30T17:17:42-06:00
     - Changes made to correct errors and correspond to 2021 Raku Advent code

@@ -10,17 +10,18 @@ B<SantaClaus::Utils> - Provides Raku software tools for Santa Claus and his Elve
 
 use SantaClaus::Utils;
 
-add-entry;     # adds a journal entry template to the 
+add-entry;     # adds a journal entry template to the
                # user's '$HOME/journal' text file
 check-journal; # checks the journal file for correct syntax
 =end code
 
 =head1 DESCRIPTION
 
-The Raku module B<SantaClaus::Utils> is used by Santa's staff to create and manage
-individual task journal entries. It also provide tools to manage as the entire collection
-of task journals for all Santa's helpers to provide status
-reports and other reports for Santa and his staff.
+The Raku module B<SantaClaus::Utils> is used by Santa's staff to
+create and manage individual task journal entries. It also provide
+tools to manage as the entire collection of task journals for all
+Santa's helpers to provide status reports and other reports for Santa
+and his staff.
 
 =head1 AUTHOR
 

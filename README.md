@@ -11,7 +11,7 @@ SYNOPSIS
 ```raku
 use SantaClaus::Utils;
 
-add-entry;     # adds a journal entry template to the 
+add-entry;     # adds a journal entry template to the
                # user's '$HOME/journal' text file
 check-journal; # checks the journal file for correct syntax
 ```

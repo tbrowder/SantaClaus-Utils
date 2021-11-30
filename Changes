@@ -1,6 +1,8 @@
 Revision history for SantaClaus-Utils
 
 {{$NEXT}}
+
+0.0.2  2021-11-30T17:17:42-06:00
     - Changes made to correct errors and correspond to 2021 Raku Advent code
 
 0.0.1  2021-11-30T14:09:09-06:00

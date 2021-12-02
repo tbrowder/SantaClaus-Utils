@@ -4,16 +4,18 @@ use Pod::Load;
 use Data::Dump;
 use Text::Utils :normalize-string;
 
-class Task is export {
+class TaskEntry is export {
     has $.id;
     has DateTime $.start;
     has DateTime $.end;
     has @.notes is rw;
+    has $.employee is rw;
 }
 
-class JEntry is export {
+class JournalEntry is export {
     has DateTime $.t;
     has @.tasks is rw;
+    has $.employee is rw;
 }
 
 sub check-task-id(:$user-id!, :$task-id!, :$debug) is export {

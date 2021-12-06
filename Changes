@@ -1,6 +1,8 @@
 Revision history for SantaClaus-Utils
 
 {{$NEXT}}
+
+0.0.4  2021-12-06T06:20:24-06:00
     - Publish to the Raku module Zef repository
 
 0.0.3  2021-11-30T17:56:31-06:00

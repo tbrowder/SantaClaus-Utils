@@ -1,4 +1,4 @@
-unit module SantaClaus::Utils:ver<0.0.3>;
+unit module SantaClaus::Utils;
 
 use Pod::Load;
 use Data::Dump;
